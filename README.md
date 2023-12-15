@@ -15,7 +15,7 @@ gsap-trial
 loaders.css
 react-leaflet
 react-loaders
-eact-router-dom
+react-router-dom
 sass
 
 I will also be using some premade assets from this portfolio here:
