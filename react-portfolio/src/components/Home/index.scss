@@ -1,12 +1,18 @@
 .home-page {
 
+    position: static;
+    height: 100vh;
+    background: url('../../assets/images/background.png') center/cover no-repeat;
+
     .text-zone {
         position: absolute;
-        left: 20%;
-        top: 60%;
+        left: 180px;
+        top: 50%;
         transform: translateY(-50%);
         width: 60%;
         max-height: 90%;
+        z-index: 3;
+
     }
 
 
@@ -15,25 +21,26 @@
 h1 {
 
     color: #ffffff;
-    font-size: 53px;
+    font-size: 64px;
     font-family: 'Coolvetica';
     font-weight: 400;
     animation: fadeIn 2s backwards;
+    z-index: 0;
 
 }
 
 h2 {
-    color: #e6e6e6;
+    color: #ffffff;
     font-family: 'Coolvetica';
     font-weight: 100;
     animation: fadeIn 2s backwards;
     animation-delay: 1s;
     letter-spacing: 3px;
-    font-size: 15px;
+    font-size: 20px;
 
     .flat-button {
-        color: #adadad;
-        font-size: 14px;
+        color: #ffffff;
+        font-size: 20px;
         font-weight: 600;
         letter-spacing: 4px;
         font-family: sans-serif;

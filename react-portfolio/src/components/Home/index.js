@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import Logo from './Logo';
+import './index.scss';
 
 const Home = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = 'John'.split('')
-    const jobArray = 'a web developer'.split('')
+    const jobArray = 'i make stuff'.split('')
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -55,7 +55,7 @@ const Home = () => {
                     
                 </h1>
                 <h2>
-                    Software Developer / College Student / Cool Fella / Fart Smella
+                    Software Developer / College Student
 
                     <br />
                     <br />
