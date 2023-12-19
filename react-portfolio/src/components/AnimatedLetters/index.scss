@@ -15,11 +15,11 @@
 
     &:hover {
         animation: rubberBand 1s;
-        color: #000000
+        color: #a8a8a8
     }
 }
 
-@for $i from 1 through 33 {
+@for $i from 1 through 37 {
     .text-animate._#{$i} {
         animation-delay: #{$i / 10}s;
     }

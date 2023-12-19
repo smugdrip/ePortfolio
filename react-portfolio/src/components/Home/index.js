@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 import Logo from './Logo';
 import './index.scss';
+import Loader from 'react-loaders';
 
 const Home = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = 'John'.split('')
-    const jobArray = 'i make stuff'.split('')
+    const jobArray = 'software developer'.split('')
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -20,6 +21,7 @@ const Home = () => {
     }, []);
     
     return (
+        <>
 
         <div className="container home-page">
 
@@ -68,6 +70,10 @@ const Home = () => {
             <Logo />
 
         </div>
+        <Loader type='pacman'/>
+
+
+        </>
     );
 }
 
