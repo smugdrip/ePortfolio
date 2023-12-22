@@ -1,12 +1,14 @@
 import './index.scss';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
-
+    const refForum = useRef()
+    
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
@@ -15,6 +17,29 @@ const Contact = () => {
         // Cleanup function to clear the timeout
         return () => clearTimeout(timeoutId);
     }, []);
+
+    const sendEmail = (e) => {
+        
+        e.preventDefault()
+
+        emailjs 
+            .sendForm (
+                'service_ayp2n17',
+                'template_103i5an',
+                refForum.current,
+                's6Bx_XgqJN_XBKAqg'
+            )
+            .then(
+                () => {
+                    alert('Message successfully sent!')
+                    window.location.reload(false)
+                },
+                () => {
+                    alert('Failed to send message, please try again')
+                }
+            )
+
+    }
     
     return (
         <>
@@ -33,8 +58,8 @@ const Contact = () => {
                     work you may have! Contact me if you want a good-looking website like
                     this one!
                 </p>
-                <div className='contact-forum'>
-                    <form>
+                <div className='contact-form'>
+                    <form ref={refForum} onSubmit={sendEmail} validate >
                         <ul>
                             <li className='half'>
                                 <input type='text' name='name' placeholder='Name' required />
@@ -43,7 +68,7 @@ const Contact = () => {
                                 <input type='email' name='email' placeholder='Email' required />
                             </li>
                             <li>
-                                <input placeholder="Subject" type='text' name='Subject' required />
+                                <input type='text' name='subject' placeholder='Subject' required />
                             </li>
                             <li>
                                 <textarea placeholder='Message' name='message' required>
@@ -63,7 +88,7 @@ const Contact = () => {
             </div>
 
         </div>
-        <Loader type='pacman'/>
+        <Loader type='ball-beat'/>
 
         </>
     )

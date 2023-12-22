@@ -1,72 +1,48 @@
-.contact-forum {
+.contact-form {
     width: 100%;
     margin-top: 20px;
+    
+    
 
     ul {
+        
         padding: 0;
         margin: 0;
-
-        li {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            margin-bottom: 10px;
-            overflow: hidden;
-            display: block;
-            position: relative;
-            opacity: 0;
-            animation: fadeInUp 2s 2s;
-            animation-fill-mode: forwards;
-        }
+        list-style: none;
+        margin-bottom: 10px;
+        overflow: hidden;
+        display: block;
+        opacity: 0;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+        clear: both;
         
-        li.half {
-            width: 49%;
-            margin-left: 2%;
-            float: left;
-            clear: none;
 
-            &:first-child {
-                margin-left: 0;
-            }
-        }
+    }
+
+    li.half {
+        
+        width: 60%;
     }
 
     input[type='text'],
     input[type='email'] {
-        width: 100%;
-        border: 0;
-        background: #2a2929;
-        height: 50px;
-        font-size: 16px;
-        color: #ffffff;
-        padding: 0 20px;
-        box-sizing: border-box;
-        border: 1px solid #ffffff;
-
-    }
-
-    textarea {
-        width: 100%;
-        border: 0;
-        background: #2a2929;
-        height: 50px;
-        font-size: 16px;
-        color: #ffffff;
-        padding: 20px;
-        min-height: 150px;
-        box-sizing: border-box;
-        border: 1px solid #ffffff;
+        margin-bottom: 10px;
+        height: 25px;
+        background: #686868;
         
-
     }
 
-    .flat-button {
-        color: #ffffff;
-        background: #2a2929;
-        letter-spacing: 3px;
-        padding: 8px 10px;
-        border: 1px solid #ffffff;
-        float: right;
-        border-radius: 4px;
+
+    
+    input[type='text']::placeholder,
+    input[type='email']::placeholder,
+    input[type='submit']::placeholder,
+    textarea::placeholder {
+        color: #ffffff; // Change this color to your desired placeholder color
     }
+    
+    
+
+
 }
