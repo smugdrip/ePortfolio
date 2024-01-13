@@ -21,10 +21,3 @@ sass
 I will also be using some premade assets from this portfolio here:
 https://github.com/bobangajicsm/react-portfolio-website
 
-I hope to include thre games i've made:
-https://pages.github.ncsu.edu/djhorine/Under-the-Snow-Webexport/
-
-a minesweeper game clone built in java,
-
-a puzzlescript game.
-
