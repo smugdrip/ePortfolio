@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
-import Logo from './Logo';
+
 import './index.scss';
 import Loader from 'react-loaders';
 
@@ -41,8 +41,6 @@ const Home = () => {
 
                     {' '}
 
-
-
                     <AnimatedLetters letterClass={letterClass}
                     strArray={nameArray}
                     idx={15}/>
@@ -66,8 +64,6 @@ const Home = () => {
                 </h2>
 
             </div>
-
-            <Logo />
 
         </div>
         <Loader type='ball-beat'/>

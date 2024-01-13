@@ -25,8 +25,10 @@ textArea {
 
 body {
   position: static;
-  height: 100vh;
+  min-height: 100vh; /* Minimum height to cover the viewport */
   background: url('../src/assets/images/background.png') center/cover no-repeat;
+  background-attachment: fixed; /* Fix the background */
+  overflow-y: auto;
 }
 
 .loader-active {

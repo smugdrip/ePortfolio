@@ -1,16 +1,19 @@
 .logo-container {
 
-    opacity: 0;
+    opacity: 1;
 
     .solid-logo {
         position: fixed;
-        top: 0px;
-        left: 500px;
+        top: 200px;
+        left: 50%;
         margin: 0px;
-        width: 400px;
+        width: 350px;
         height: auto;
-        opacity: 1;
+        opacity: 0;
         z-index: 1;
+        animation: fadeInUp 1s 1s;
+        animation-fill-mode: forwards;
+
 
     }
 

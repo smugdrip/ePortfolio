@@ -1,14 +1,49 @@
 import './index.scss';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
 
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
-    const refForum = useRef()
-    
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const serviceId = 'service_ayp2n17';
+        const templateId = 'template_m3cwd2o';
+        const publicKey = 's6Bx_XgqJN_XBKAqg';
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            to_name: 'John',
+            message: message,
+        };
+
+        emailjs.send( serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+
+                console.log('Email sent successfully', response);
+                alert('Message sent successfully!');
+                setName('');
+                setEmail('');
+                setMessage('');
+            })
+            .catch((error) => {
+                alert('Failed to send email, please try again');
+                console.error('Error sending email:', error);
+            });
+
+    }
+
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
@@ -17,35 +52,14 @@ const Contact = () => {
         // Cleanup function to clear the timeout
         return () => clearTimeout(timeoutId);
     }, []);
-
-    const sendEmail = (e) => {
-        
-        e.preventDefault()
-
-        emailjs 
-            .sendForm (
-                'service_ayp2n17',
-                'template_103i5an',
-                refForum.current,
-                's6Bx_XgqJN_XBKAqg'
-            )
-            .then(
-                () => {
-                    alert('Message successfully sent!')
-                    window.location.reload(false)
-                },
-                () => {
-                    alert('Failed to send message, please try again')
-                }
-            )
-
-    }
     
     return (
         <>
 
         <div className='container contact-page'>
+
             <div className='text-zone'>
+
                 <h1>
                     <AnimatedLetters
                     letterClass={letterClass}
@@ -58,36 +72,57 @@ const Contact = () => {
                     work you may have! Contact me if you want a good-looking website like
                     this one!
                 </p>
-                <div className='contact-form'>
-                    <form ref={refForum} onSubmit={sendEmail} validate >
-                        <ul>
-                            <li className='half'>
-                                <input type='text' name='name' placeholder='Name' required />
-                            </li>
-                            <li className='half'>
-                                <input type='email' name='email' placeholder='Email' required />
-                            </li>
-                            <li>
-                                <input type='text' name='subject' placeholder='Subject' required />
-                            </li>
-                            <li>
-                                <textarea placeholder='Message' name='message' required>
+            </div>
 
-                                </textarea>
-                            </li>
-                            <li>
-                                <input type='submit' className='flat-button' value='SEND' />
-                            </li>
+            <form onSubmit={handleSubmit} className='emailForm' validate >
+                <input
+                    type='text'
+                    placeholder='Name'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                />
+                <input
+                    type='email'
+                    placeholder='Email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <textarea
+                    cols='30'
+                    rows='10'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder='Message'
+                >
+                </textarea>
+                <button type='submit'>Send Email</button>
+            </form>
 
-                        </ul>
-                    </form>
+            <div className ='info-map'>
+                John Butterfield
+                <br />
+                Raleigh,
+                <br />
+                North Carolina
+                <br />
+                <span>jpmcb141@gmail.com</span>
 
-                </div>
+            </div>
+            <div className='map-wrap'>
 
+            <MapContainer center={[37.8591, -122.4853]} zoom={13} scrollWheelZoom={false}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+            </MapContainer>
 
             </div>
 
         </div>
+
         <Loader type='ball-beat'/>
 
         </>
