@@ -72,6 +72,9 @@ const Contact = () => {
                     work you may have! Contact me if you want a good-looking website like
                     this one!
                 </p>
+                <p>
+                    Here is a map of NC State, where I attend classes.
+                </p>
             </div>
 
             <form onSubmit={handleSubmit} className='emailForm' validate >
@@ -112,7 +115,7 @@ const Contact = () => {
             </div>
             <div className='map-wrap'>
 
-            <MapContainer center={[37.8591, -122.4853]} zoom={13} scrollWheelZoom={false}>
+            <MapContainer center={[35.7851, -78.6813]} zoom={15} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
