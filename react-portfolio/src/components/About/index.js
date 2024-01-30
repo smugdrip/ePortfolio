@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faJava, faPython, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
 import { Loader } from 'react-loaders';
-import MeImage from '../../assets/images/me.jpeg';
+import MeImage from '../../assets/images/java_prof.png';
 
 const About = () => {
 
@@ -33,13 +33,11 @@ const About = () => {
                     />
                 </h1>
                 <p>
-                    Hi! My name is John Butterfield and I'm currently pursuing
+                    My name is John Butterfield and I'm currently pursuing
                     a degree in computer science from NC State.
                 </p>
                 <p>
-                    As a computer science student at NC State, my academic journey and hands-on projects reflect 
-                    a strong foundation in both theoretical and practical aspects of software 
-                    development. My coursework has spanned a range of vital subjects, including:
+                    Heres some of the classes I've taken which may interest you:
                 </p>
                 <ul>
                     <li>Object-Oriented Design in Java</li>
@@ -50,11 +48,9 @@ const About = () => {
                     <li>Discrete Mathematics</li>
                     <li>Applied Statistics</li>
                     <li>Operating Systems</li>
+                    <li>Applications of Python</li>
                 </ul>
-                <p>
-                    This diverse academic background has equipped me with a deep understanding of the 
-                    fundamental principles of computer science. 
-                </p>
+                
                 <p>
                     In terms of programming languages, I am proficient in:
                 </p>
@@ -66,19 +62,8 @@ const About = () => {
                     <li>JavaScript</li>
                 </ul>
                 <p>
-                    My ability to adapt to different programming environments 
-                    enables me to approach problems with flexibility and creativity. Additionally, 
-                    I have honed my skills in various developer tools like Visual Studio Code, 
-                    Eclipse IDE, Git, GitHub, and PuTTY, which has enhanced my ability to work 
-                    efficiently and collaborate effectively in team settings.
-                </p>
-                <p>
-                    So far I have enjoyed everything about software development and I get plenty 
-                    of satisfaction from working on big coding projects. For me, Coding is something
-                    I look forward to. The creativity and satisfaction of coding has kept me engaged and
-                    interested in the world of software development. Having a final product that I am
-                    proud of is vital to me so spending some extra time to have a beautiful final project, to me, 
-                    is worth it.
+                    Additionally, I have experience various developer tools like Visual Studio Code, 
+                    Eclipse IDE, Git, GitHub, and Linux.
                 </p>
             </div>
 

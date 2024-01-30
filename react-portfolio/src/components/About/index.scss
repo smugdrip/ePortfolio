@@ -1,24 +1,23 @@
 
 
 .me-image {
-
     animation-name: fadeIn, floatAnimation; /* Apply both animations */
     animation-duration: 5s, 3s; /* Duration for each animation */
-    animation-delay: 0s, 2s; /* Start floatAnimation after fadeIn ends */
+    animation-delay: 2s, 4s; /* 2-second delay for fadeIn, start floatAnimation after fadeIn ends */
     animation-timing-function: ease-in-out; /* Timing function for floatAnimation */
     animation-iteration-count: 1, infinite; /* fadeIn runs once, floatAnimation runs infinitely */
+    animation-fill-mode: forwards;
     position: absolute;
     width: 300px;
     height: 300px;
     margin-left: calc(50% + 300px);
     left: -100px;
-    top: 20%;
+    top: 400px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #000;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
-    
-
+    opacity: 0; /* Initial opacity set to 0 */
 }
 
 
@@ -75,6 +74,11 @@
     .face6 {
         transform: rotateX(-90deg) translateZ(150px);
     }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes spincube {

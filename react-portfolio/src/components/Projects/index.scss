@@ -18,10 +18,12 @@
 
 .project-tile {
     background-color: #f5f5f5; // Light grey background for each tile
-    border-radius: 10px; // Rounded corners
+    border-radius: 15px; // Rounded corners
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
     transition: transform 0.3s ease;
+    font-family: 'Coolvetica';
+    font-size: 20px;
 
     &:hover {
         transform: translateY(-5px); // Slight lift effect on hover

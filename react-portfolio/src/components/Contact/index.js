@@ -73,7 +73,7 @@ const Contact = () => {
                     this one!
                 </p>
                 <p>
-                    Here is a map of NC State, where I attend classes.
+                    Shoot me an email with the form below if you have any questions, concerns, or just want to chat :)
                 </p>
             </div>
 

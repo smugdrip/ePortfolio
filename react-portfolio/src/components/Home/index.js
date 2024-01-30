@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
+import me_pic from '../../assets/images/IMG_6327.jpg'
 
 import './index.scss';
 import Loader from 'react-loaders';
@@ -9,12 +10,12 @@ const Home = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = 'John'.split('')
-    const jobArray = 'software developer'.split('')
+    const jobArray = 'welcome to my portfolio!'.split('')
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
-        }, 4000);
+        }, 5000);
 
         // Cleanup function to clear the timeout
         return () => clearTimeout(timeoutId);
@@ -65,6 +66,9 @@ const Home = () => {
 
             </div>
 
+        </div>
+        <div className='img-cont'>
+            <img src={me_pic} alt='John Butterfield' className='me-image' />
         </div>
         <Loader type='ball-beat'/>
 
