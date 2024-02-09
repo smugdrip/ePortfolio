@@ -23,7 +23,6 @@ const About = () => {
         <>
         <div className='container about-page'>
             <div className='text-zone'>
-                <br />
                 <h1>
                     <AnimatedLetters
                     letterClass = {letterClass}
@@ -40,9 +39,6 @@ const About = () => {
                 </p>
                 <p>
                     Aside from my personal projects, I've learned a lot these classes:
-                </p>
-                <p>
-                    click on a tile to learn more about the class
                 </p>
                 <ul className="class-list">
                     <li><a href="https://www.engineeringonline.ncsu.edu/course/csc-216-software-development-fundamentals/" target="_blank" rel="noreferrer">Object-Oriented Design in Java</a></li>
