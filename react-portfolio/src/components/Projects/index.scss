@@ -5,6 +5,19 @@
     align-items: center; // Center-align items
     position: relative; // Use relative for natural flow
     left: 50px;
+
+    p{
+        color: #ffffff;
+        font-family: 'Coolvetica';
+        font-weight: 100;
+        animation: fadeIn 3s backwards;
+        animation-delay: 2s;
+        letter-spacing: 3px;
+        font-size: 20px;
+    }
+
+
+
 }
 
 .projects-grid {
@@ -23,7 +36,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
     transition: transform 0.3s ease;
     font-family: 'Coolvetica';
-    font-size: 20px;
+    font-size: 17px;
 
     &:hover {
         transform: translateY(-5px); // Slight lift effect on hover
@@ -36,10 +49,11 @@
     animation: fadeIn 1s ease forwards;
     opacity: 0; // Start with the tile being invisible
 
-    &:nth-child(1) { animation-delay: 1.2s; }
-    &:nth-child(2) { animation-delay: 1.4s; }
-    &:nth-child(3) { animation-delay: 1.6s; }
-    &:nth-child(4) { animation-delay: 1.8s; }
-    &:nth-child(5) { animation-delay: 2s; }
-    &:nth-child(6) { animation-delay: 2.2s; }
+    &:nth-child(1) { animation-delay: 2.2s; }
+    &:nth-child(2) { animation-delay: 2.4s; }
+    &:nth-child(3) { animation-delay: 2.6s; }
+    &:nth-child(4) { animation-delay: 2.8s; }
+    &:nth-child(5) { animation-delay: 3s; }
+    &:nth-child(6) { animation-delay: 3.2s; }
+    &:nth-child(7) { animation-delay: 3.4s; }
 }

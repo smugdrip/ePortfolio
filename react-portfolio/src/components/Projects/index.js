@@ -11,27 +11,31 @@ const Projects = () => {
     const projects = [
         {
             title: "Portfolio Website",
-            description: "You're looking at it! A personal website showcasing my skills and projects, developed using JavaScript, HTML, and CSS. This site features a responsive design, interactive elements, and a modern aesthetic."
-        },
-        {
-            title: "Store Inventory Management",
-            description: "A Java-based store inventory management application. Features include real-time inventory updates following purchases, a text-based user interface, and a robust File I/O system for persistent data storage."
+            description: "You're looking at it! Developed using JavaScript, React, HTML, and CSS."
         },
         {
             title: "Student Registration System",
-            description: "Developed in Java, this project mimics the official NCSU student registration system. It includes a full-fledged user interface, a password management system, and tools catering to various user roles, ensuring a comprehensive educational administrative experience."
+            description: "Developed in Java, this project mimics the official NCSU student registration system. It includes a full-fledged user interface, a password management system, and spefific tools catering to various user roles like staff vs student."
         },
         {
             title: "Memory Encryption and Decryption",
-            description: "Implemented in C, this project focuses on memory encryption and decryption. It utilizes the LUCIFER encryption/decryption algorithm, handling both binary and text files, and provides secure encryption with a key that translates text files into ciphertext and vice versa."
+            description: "Implemented in C, this project focuses on memory encryption and decryption. It utilizes the (outdated) LUCIFER encryption/decryption algorithm from 1970, handling both binary and text files."
         },
         {
             title: "Custom Hash Map",
-            description: "A fully custom hash map implemented in C, built without relying on pre-existing hash map libraries. It demonstrates efficient data hashing into buckets based on string values, exemplifying my understanding of data structures and algorithms."
+            description: "A fully custom hash map implemented in C, built without relying on pre-existing hash map libraries. This reinforced my understanding of abstract data structures and how to implement them in a low-level language like C."
         },
         {
-            title: "Minesweeper Game Clone",
-            description: "A Java implementation of the classic Minesweeper game. This project showcases my skills in GUI design, game logic, and user interaction, featuring a custom board generator, recursive algorithms for detecting safe spaces, and a non-volatile score tracking system."
+            title: "Minesweeper",
+            description: "A Java implementation of the classic Minesweeper game. Features a full GUI, custom game logic, custom board generator, recursive algorithms for detecting safe spaces, and a non-volatile record tracking system."
+        },
+        {
+            title: "(In progress) Python Web Scraper",
+            description: "A web scraper implemented in python, used to extract data from websites."
+        },
+        {
+            title: "(In progress) Python Machine Learning",
+            description: "A basic machine learning project that is able to classify consumer complaints."
         }
     ];
 
@@ -56,11 +60,16 @@ const Projects = () => {
                     />
             </h1>
 
+            <p>
+                If you dont mind, let me show off some programming projects
+            </p>
+            <br/>
+
             <div className='projects-grid'>
                 {projects.map((project, index) => (
                     <div key={index} className='project-tile'>
                         <h3>{project.title}</h3>
-                        <p>{project.description}</p>
+                        <p1>{project.description}</p1>
                     </div>
                 ))}
             </div>

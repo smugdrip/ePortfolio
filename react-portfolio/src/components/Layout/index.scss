@@ -1,3 +1,4 @@
+
 .page {
     width: 100%;
     height: 100%;
@@ -20,23 +21,28 @@
 }
 
 .about-page {
+    
     .text-zone {
 
-
+        background-color: rgba(0, 0, 0, 0.1);
+        overflow: visible;
+        border-radius: 10%;
         animation: fadeIn 2s backwards;
         animation-delay: 1s;
-        z-index: -1;
+        z-index: 1;
         position: absolute;
-        left: 20%;
         top: 0px;
-        width: 70%;
+        width: 60%;
         vertical-align: middle;
         display: table-cell;
         min-height: 100%;
         // background-color: rgba(63, 63, 63, 0.4);
         // padding: 10px;
-        
-        
+        display: flex;
+        flex-direction: column; // Adjust to column layout
+        align-items: center; // Center-align items
+        position: relative; // Use relative for natural flow
+        left: 100px;
 
         h1 {
             font-size: 75px;
@@ -44,96 +50,89 @@
             margin-top: 0;
             position: relative;
             margin-bottom: 40px;
-            left: 25%;
+            left: 0%;
             animation: fadeIn 2s backwards;
-            // background-color: rgb(0, 0, 0);
             padding: 15px;
 
         }
 
-        @keyframes fadeInListItem {
-            0% { opacity: 0; transform: translateY(-10px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        
         ul {
-            list-style: none; /* This is the default style, so it's actually optional */
-            padding-left: 40px; /* Adjust the padding to align the list properly */
-            font-style: 15px;
-            color: #ffffff;
-            font-family: sans-serif;
-            font-size: 14px;
-            left: 20%;
-            // Apply fade-in animation to all list items
-            li {
-                opacity: 0; // Start with invisible items
-                animation: fadeInListItem 1s ease forwards;
-            }
-            // Stagger the animation for each list item
-            li:nth-child(1) { animation-delay: 0.3s; }
-            li:nth-child(2) { animation-delay: 0.6s; }
-            li:nth-child(3) { animation-delay: 0.9s; }
-            li:nth-child(4) { animation-delay: 1.2s; }
-            li:nth-child(5) { animation-delay: 1.5s; }
-            li:nth-child(6) { animation-delay: 1.8s; }
-            li:nth-child(7) { animation-delay: 2.1s; }
-            li:nth-child(8) { animation-delay: 2.4s; }
-            li:nth-child(9) { animation-delay: 2.7s; }
-            // Continue adding delays for more list items as needed
-        }
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // 3 columns
+            grid-gap: 20px; // Space between tiles
+            width: 90%;
+            margin-top: 30px; // Space below the h1 tag
+            list-style: none;
+            margin-bottom: 30px;
+            
 
-        ul li {
-            margin-bottom: 10px; /* Adjust the spacing between list items if needed */
-            font-style: 15px;
-            color: #ffffff;
-            font-family: sans-serif;
-            font-size: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            left: 10px;
+            li {
+                background-color: #f5f5f5; // Light grey background for each tile
+                border-radius: 15px; // Rounded corners
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+                transition: transform 0.3s ease;
+                font-family: 'Coolvetica';
+                font-size: 20px;
+                
+
+                &:hover {
+                    transform: translateY(-5px); // Slight lift effect on hover
+                }
+
+
+                animation: fadeIn 1s ease forwards;
+                opacity: 0; // Start with the tile being invisible
+
+                &:nth-child(1) { animation-delay: 1.2s; }
+                &:nth-child(2) { animation-delay: 1.4s; }
+                &:nth-child(3) { animation-delay: 1.6s; }
+                &:nth-child(4) { animation-delay: 1.8s; }
+                &:nth-child(5) { animation-delay: 2.0s; }
+                &:nth-child(6) { animation-delay: 2.2s; }
+                &:nth-child(7) { animation-delay: 2.4s; }
+                &:nth-child(8) { animation-delay: 2.6s; }
+                &:nth-child(9) { animation-delay: 2.8s; }
+            }
         }
 
         p {
-            // font-style: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #ffffff;
-            font-family: sans-serif;
-            font-size: 25px;
+            font-family: 'Coolvetica';
             font-weight: 100;
+            animation: fadeIn 3s backwards;
+            animation-delay: 1s;
+            letter-spacing: 3px;
+            font-size: 20px;
+
+
+
             // letter-spacing: 1px;
-            min-width: fit-content;
+            max-width: 600px;
             opacity: 1;
             animation: fadeIn 2s backwards;
             padding: 10px;
             left: 50%;
             line-height: 1.5;
-            
-            
 
-            &:nth-of-type(1) {
-                animation-delay: 1.2s;
-            }
-
-            &:nth-of-type(2) {
-                animation-delay: 1.5s;
-            }
-
-            &:nth-of-type(3) {
-                animation-delay: 1.7s;
-            }
         }
     }
 
-    .text-animate-hover {
-        &:hover {
-            color: #a8a8a8;
-            
-        }
-    }
 }
 
 @keyframes fadeInListItem {
-    0% { opacity: 0; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-page {
@@ -152,8 +151,8 @@
         min-height: 100%;
         // background-color: rgba(63, 63, 63, 0.4);
         padding: 10px;
-        
-        
+
+
 
         h1 {
             font-size: 75px;
@@ -168,43 +167,20 @@
 
         }
 
-        ul {
-            animation: fadeIn 2s backwards;
-            animation-delay: 1s;
-            list-style-type: disc; /* This is the default style, so it's actually optional */
-            padding-left: 40px; /* Adjust the padding to align the list properly */
-            font-style: 15px;
-            color: #ffffff;
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        ul li {
-            margin-bottom: 10px; /* Adjust the spacing between list items if needed */
-            font-style: 15px;
-            color: #ffffff;
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
         p {
             // font-style: 15px;
             color: #ffffff;
-            font-family: sans-serif;
-            font-size: 25px;
-            font-weight: 100;
-            // letter-spacing: 1px;
+            font-family: 'Coolvetica';
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 2px;
             max-width: 650px;
             opacity: 1;
             animation: fadeIn 2s backwards;
             padding: 10px;
             line-height: 1.5;
-            
-            
+
+
 
             &:nth-of-type(1) {
                 animation-delay: 1.2s;
@@ -223,7 +199,7 @@
     .text-animate-hover {
         &:hover {
             color: #a8a8a8;
-            
+
         }
     }
 }

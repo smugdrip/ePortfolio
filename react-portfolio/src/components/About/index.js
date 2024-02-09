@@ -27,28 +27,33 @@ const About = () => {
                 <h1>
                     <AnimatedLetters
                     letterClass = {letterClass}
-                        strArray={'About me'.split('')}
+                        strArray={'What can I do?'.split('')}
                         idx={15}
 
                     />
                 </h1>
                 <p>
-                    My name is John Butterfield and I'm currently pursuing
-                    a degree in computer science from NC State.
+                You can download my resume{" "}
+                <a href="/assets/pdf/JohnButterfieldResume.pdf" download>
+                    <span style={{ margin: '0 5px' }}>here</span>
+                </a>.
                 </p>
                 <p>
-                    Heres some of the classes I've taken which may interest you:
+                    Aside from my personal projects, I've learned a lot these classes:
                 </p>
-                <ul>
-                    <li>Object-Oriented Design in Java</li>
-                    <li>Software Engineering in C</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Numerical Methods</li>
-                    <li>Linear Programming</li>
-                    <li>Discrete Mathematics</li>
-                    <li>Applied Statistics</li>
-                    <li>Operating Systems</li>
-                    <li>Applications of Python</li>
+                <p>
+                    click on a tile to learn more about the class
+                </p>
+                <ul className="class-list">
+                    <li><a href="https://www.engineeringonline.ncsu.edu/course/csc-216-software-development-fundamentals/" target="_blank" rel="noreferrer">Object-Oriented Design in Java</a></li>
+                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=17500048" target="_blank" rel="noreferrer">Software Engineering in C</a></li>
+                    <li><a href="https://www.engineeringonline.ncsu.edu/course/csc-316-data-structures-and-algorithms/" target="_blank" rel="noreferrer">Data Structures and Algorithms</a></li>
+                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=15" target="_blank" rel="noreferrer">Numerical Methods</a></li>
+                    <li><a href="https://wolfware.ncsu.edu/courses/details/?sis_id=SIS:2022:1:1:MA:305:601" target="_blank" rel="noreferrer">Linear Algebra</a></li>
+                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=8000025" target="_blank" rel="noreferrer">Discrete Mathematics</a></li>
+                    <li><a href="https://wolfware.ncsu.edu/courses/details/?sis_id=SIS:2022:1:1:ST:370:601" target="_blank" rel="noreferrer">Applied Statistics</a></li>
+                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=8000026" target="_blank" rel="noreferrer">Operating Systems</a></li>
+                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=14" target="_blank" rel="noreferrer">Applications of Python</a></li>
                 </ul>
                 
                 <p>
@@ -60,11 +65,13 @@ const About = () => {
                     <li>C</li>
                     <li>HTML/CSS</li>
                     <li>JavaScript</li>
+                    <li>R</li>
                 </ul>
                 <p>
                     Additionally, I have experience various developer tools like Visual Studio Code, 
                     Eclipse IDE, Git, GitHub, and Linux.
                 </p>
+
             </div>
 
             <div className='stage-cube-cont'>
@@ -93,7 +100,7 @@ const About = () => {
             </div>
 
             <div className='img-cont'>
-                <img src={MeImage} alt='John Butterfield' className='me-image' />
+                <img src={MeImage} alt='Java Cert' className='java-image' />
             </div>
 
         </div>

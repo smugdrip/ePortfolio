@@ -3,7 +3,7 @@ import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 
@@ -69,8 +69,7 @@ const Contact = () => {
                 </h1>
                 <p>
                     I am interested in any opportunities like internships and freelance
-                    work you may have! Contact me if you want a good-looking website like
-                    this one!
+                    work you may have!
                 </p>
                 <p>
                     Shoot me an email with the form below if you have any questions, concerns, or just want to chat :)
@@ -115,11 +114,21 @@ const Contact = () => {
             </div>
             <div className='map-wrap'>
 
-            <MapContainer center={[35.7851, -78.6813]} zoom={15} scrollWheelZoom={false}>
+            <MapContainer center={[35.7721, -78.6735]} zoom={15} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+                <Marker position={[35.7716, -78.6735]}>
+                    <Popup>
+                        NC State's computer science building
+                    </Popup>
+                </Marker>
+                <Marker position={[35.7649, -78.6805]}>
+                    <Popup>
+                        I enjoy biking around this lake, its beautiful during the sunset.
+                    </Popup>
+                </Marker>
             </MapContainer>
 
             </div>
