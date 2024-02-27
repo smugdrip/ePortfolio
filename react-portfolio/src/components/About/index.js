@@ -33,18 +33,22 @@ const About = () => {
 
                     />
                 </h1>
-                <p>
+                <h2>
                     You can download my resume{" "}
                     <a href="/assets/pdf/JohnButterfieldResume.pdf" download>
                         <span style={{ margin: '0 5px' }}>here</span>
                     </a>.
-                </p>
+                </h2>
+
                 <p>
                     Hey! My name is John Butterfield and I am currently a Junior at NC State University, studying Computer Science.
 
                 </p>
                 <p>
-                    Since I was young, tinkering with computers and building PCs has been more than a hobby; it's been a way to connect with a world that's constantly evolving. Coding, to me, is fascinating because it's applicable across so many fields and presents endless problem-solving opportunities. Each challenge solved feels like a personal victory, making the process incredibly rewarding.
+                    Since I was young, tinkering with computers and building PCs has been more than a hobby; it's been a way to 
+                    connect with a world that's constantly evolving. Coding, to me, is fascinating because it's applicable across 
+                    so many fields and presents endless problem-solving opportunities. Each challenge solved feels like a personal 
+                    victory, making the process incredibly rewarding.
                 </p>
                 <br/>
                 <br/>
@@ -52,41 +56,76 @@ const About = () => {
                 <h1>
                     <AnimatedLetters
                     letterClass = {letterClass}
-                        strArray={'What can I do?'.split('')}
+                        strArray={'Skills'.split('')}
                         idx={10}
 
                     />
                 </h1>
 
-                <p>
-                    Aside from my personal projects, I've learned a lot these classes:
-                </p>
+                <h3>
+                    Relevant Coursework
+                </h3>
                 <ul className="class-list">
-                    <li><a href="https://www.engineeringonline.ncsu.edu/course/csc-216-software-development-fundamentals/" target="_blank" rel="noreferrer">Object-Oriented Design in Java</a></li>
+                    <pre><li><a href="https://www.engineeringonline.ncsu.edu/course/csc-216-software-development-fundamentals/" target="_blank" rel="noreferrer">Object-Oriented Design in Java</a></li>
                     <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=17500048" target="_blank" rel="noreferrer">Software Engineering in C</a></li>
                     <li><a href="https://www.engineeringonline.ncsu.edu/course/csc-316-data-structures-and-algorithms/" target="_blank" rel="noreferrer">Data Structures and Algorithms</a></li>
                     <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=15" target="_blank" rel="noreferrer">Numerical Methods</a></li>
-                    <li><a href="https://wolfware.ncsu.edu/courses/details/?sis_id=SIS:2022:1:1:MA:305:601" target="_blank" rel="noreferrer">Linear Algebra</a></li>
-                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=8000025" target="_blank" rel="noreferrer">Discrete Mathematics</a></li>
-                    <li><a href="https://wolfware.ncsu.edu/courses/details/?sis_id=SIS:2022:1:1:ST:370:601" target="_blank" rel="noreferrer">Applied Statistics</a></li>
                     <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=8000026" target="_blank" rel="noreferrer">Operating Systems</a></li>
-                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=14" target="_blank" rel="noreferrer">Applications of Python</a></li>
+                    <li><a href="https://www.csc.ncsu.edu/courses/outcomes.php?uniq_id=14" target="_blank" rel="noreferrer">Applications of Python</a></li></pre>
                 </ul>
-                
+                <h3>
+                    Primary Programming Languages
+                </h3>
                 <p>
-                    In terms of programming languages, I am proficient in:
+                    <pre>
+                        C,  Python,   Java
+                    </pre>
                 </p>
-                <ul>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>HTML/CSS</li>
-                    <li>JavaScript</li>
-                    <li>R</li>
-                </ul>
+                <h3>
+                    Secondary Programming Languages
+                </h3>
                 <p>
-                    Additionally, I have experience various developer tools like Visual Studio Code, 
-                    Eclipse IDE, Git, GitHub, and Linux.
+                    <pre>
+                        R,  HTML/CSS,  JavaScript
+                    </pre>
+                </p>
+                <h3>
+                    Testing Frameworks
+                </h3>
+                <p>
+                    <pre>
+                        JUnit,  unittest
+                    </pre>
+                </p>
+                <h3>
+                    Tools
+                </h3>
+                <p>
+                    <pre>
+                        Git,  Visual Studio Code,  SSH Tools (PuTTY),  Chrome Developer Tools,  
+                    </pre>
+                    <pre>
+                        Debuggers (GDB), UML Modeling Tools,  Linux,  Eclipse IDE
+                    </pre>
+                </p>
+                <h3>
+                    Concepts
+                </h3>
+                <p>
+                    <pre>
+                    Object Oriented Analysis and Design,  Object Oriented Programming,
+                    </pre>
+                    <pre>
+                    Design Patterns,  Software Development Methodologies,  Testing and Quality Assurance
+                    </pre>
+                </p>
+                <h3>
+                    Soft Skills
+                </h3>
+                <p>
+                    <pre>
+                        Leadership,  Teamwork,  Team-building,  Management,  Collaboration
+                    </pre>
                 </p>
 
             </div>

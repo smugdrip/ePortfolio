@@ -22,8 +22,7 @@
 
 .about-page {
 
-    left: 100px;
-    justify-content: center;
+    left: 00px;
     
     .text-zone {
 
@@ -43,40 +42,74 @@
         
 
 
-        // h1 {
-        //     font-size: 75px;
-        //     font-family: 'Coolvetica';
-        //     margin-top: 0;
-        //     position: relative;
-        //     text-align: left;
-        //     animation: fadeIn 2s backwards;
-        //     width: 100%;
-        //     left: -25px;
+        h1 {
+            font-size: 75px;
+            font-family: 'Coolvetica';
+            margin-top: 0;
+            position: relative;
+            text-align: left;
+            animation: fadeIn 2s backwards;
+            width: 100%;
+            align-self: center;
+            margin-left: 100px;
 
-        // }
+        }
+
+        h2 {
+            font-size: 25px;
+            font-family: 'Coolvetica';
+            margin-top: 0;
+            position: relative;
+            text-align: left;
+            animation: fadeIn 2s backwards;
+            width: 100%;
+            align-self: center;
+            margin-left: 100px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-family: 'Coolvetica';
+            margin-top: 0;
+            position: relative;
+            text-align: left;
+            animation: fadeIn 2s backwards;
+            width: 100%;
+            align-self: center;
+            margin-left: 100px;
+            color: #000;
+            letter-spacing: 2px;
+            font-weight: 400;
+            margin-bottom: 0px;
+        }
 
         ul {
             
             display: grid;
-            grid-template-columns: repeat(3, 1fr); // 3 columns
-            grid-gap: 15px; // Space between tiles
+            grid-template-columns: repeat(2, 1fr); // 3 columns
+            grid-gap: 0px; // Space between tiles
             width: 50%;
-            margin-top: 15px; // Space below the h1 tag
-            list-style: none;
-            padding: 20px;
+            margin-top: 0px; // Space below the h1 tag
+            margin-bottom: 15px;
+            //list-style: ;
+            padding: 0px;
             border-radius: 8%;
+            align-self: left;
+            margin-left: 75px;
             
 
             li {
                 
-                background-color: #ededed; // Light grey background for each tile
-                border-radius: 15px; // Rounded corners
+                //background-color: #ededed; // Light grey background for each tile
+
                 padding: 15px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+                //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
                 transition: transform 0.3s ease;
-                font-family: 'Coolvetica';
-                font-size: 20px;
+                font-size: 18px;
                 z-index: 999;
+                color: #000;
+                padding: 2px;
+                margin-left: 20px;
                 
 
                 &:hover {
@@ -99,6 +132,7 @@
             }
         }
 
+
         p {
             text-align: left;
             color: #000000;
@@ -107,13 +141,15 @@
             animation: fadeIn 3s backwards;
             animation-delay: 1s;
             letter-spacing: 2px;
-            font-size: 20px;
-            max-width: 80%;
+            font-size: 18px;
+            max-width: 100%;
             opacity: 1;
             animation: fadeIn 2s backwards;
             padding: 0px;
             line-height: 1.5;
-            //margin-left: 100px;
+            margin-left: 60px;
+            align-self: left;
+            font-weight: 400;
 
         }
     }
