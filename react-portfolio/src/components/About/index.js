@@ -34,7 +34,7 @@ const About = () => {
                     />
                 </h1>
                 <h2>
-                    You can download my resume{" "}
+                    You can download my resume as a pdf{" "}
                     <a href="/assets/pdf/JohnButterfieldResume.pdf" download>
                         <span style={{ margin: '0 5px' }}>here</span>
                     </a>.
