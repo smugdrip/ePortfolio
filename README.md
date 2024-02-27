@@ -18,6 +18,3 @@ react-loaders
 react-router-dom
 sass
 
-I will also be using some premade assets from this portfolio here:
-https://github.com/bobangajicsm/react-portfolio-website
-
