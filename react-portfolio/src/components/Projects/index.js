@@ -20,7 +20,7 @@ const Projects = () => {
         },
         {
             title: "JavaScript : Portfolio Website",
-            description: "You're looking at it! Developed using JavaScript, React, HTML, and CSS.",
+            description: "You're looking at it! Developed using JavaScript, React, HTML, and CSS. Hosted on vercel cloud hosting.",
             url: "https://github.com/smugdrip/ePortfolio"
         },
         {
@@ -30,22 +30,22 @@ const Projects = () => {
         },
         {
             title: "C : Memory Encryption and Decryption",
-            description: "Implemented in C, this project focuses on memory encryption and decryption. It utilizes the (outdated) LUCIFER encryption/decryption algorithm from 1970, handling both binary and text files.",
+            description: "This project focuses on memory encryption and decryption. It utilizes the (outdated) LUCIFER encryption/decryption algorithm from 1970, handling both binary and text files. This project reinforced my ability to manage abstract data structures in a low level language like C.",
             url: "https://github.com/smugdrip/Memory-Encryption"
         },
         {
             title: "Java : Minesweeper",
-            description: "A Java implementation of the classic Minesweeper game. Features a full GUI, custom game logic, custom board generator, recursive algorithms for detecting safe spaces, and a non-volatile record tracking system.",
+            description: "An implementation of the classic Minesweeper game. Features a full GUI, custom game logic, custom board generator, recursive algorithms for detecting safe spaces, and a non-volatile record tracking system. After each input by the user, the program updates the game board and renders it, known as Game Loop Design.",
             url: "https://github.com/smugdrip/Minesweeper"
         },
         {
             title: "(In progress) Python : Web Scraper",
-            description: "A web scraper implemented in python, used to extract data from websites.",
+            description: "A web scraper implemented in python, used to extract data from websites. Eventually, I will use this alongside machine learning to easily get data and make predictions for new problems",
             url: "https://github.com/smugdrip/ePortfolio"
         },
         {
             title: "Java : Support Ticket Manager",
-            description: "A Java project with a full GUI where support tickets are managed by a priority based system that considers time/type of issue/who sent the request. Tickets are imported/exported to a text file",
+            description: "A Java project with a full GUI where support tickets are managed by a priority based system that considers time/type of issue/who sent the request. Tickets are imported/exported to a text file. This project was implemented alongside 3 team members as a group project, reinforcing my ability to work in team environments. The project was based on mimicking a real client which had changing requirements and real deadlines.",
             url: "https://github.com/smugdrip/Support-Ticket-Manager"
         }
     ];
