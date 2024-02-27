@@ -13,6 +13,9 @@ const Home = () => {
     const jobArray = 'welcome to my portfolio!'.split('')
 
     useEffect(() => {
+
+        document.title = "Home";
+
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
         }, 5000);
@@ -61,7 +64,8 @@ const Home = () => {
                     <br />
                     <br />
 
-                    <Link to="contact" className='flat-button'> CONTACT ME</Link>
+                    <Link to="contact" className='flat-button'> CONTACT ME </Link>
+                    <Link to="projects" className='flat-button'> MY PROJECTS </Link>
                 </h2>
 
             </div>

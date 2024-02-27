@@ -14,60 +14,61 @@
     position: absolute;
     opacity: 1;
     top: 5%;
-    margin: 0 auto;
-    z-index: 0;
+    margin-left: 100px;
+    z-index: 4;
     transform-style: preserve-3d;
 
 }
 
 .about-page {
+
+    left: 100px;
+    justify-content: center;
     
     .text-zone {
 
-        // background-color: rgba(0, 0, 0, 0.1);
         overflow: visible;
         border-radius: 10%;
         animation: fadeIn 2s backwards;
         animation-delay: 1s;
         z-index: 1;
-        position: absolute;
         top: 0px;
         width: 60%;
-        left: 200px;
-        // vertical-align: middle;
         display: table-cell;
         min-height: 100%;
-        // background-color: rgba(63, 63, 63, 0.4);
-        // padding: 10px;
         display: flex;
-        flex-direction: column; // Adjust to column layout
-        // align-items: center; // Center-align items
-        position: relative; // Use relative for natural flow
+        flex-direction: column;
+        // padding: 30px;
+        // padding-left: 0px;
+        
 
-        h1 {
-            font-size: 75px;
-            font-family: 'Coolvetica';
-            margin-top: 0;
-            position: relative;
-            margin-bottom: 0px;
-            left: 0%;
-            animation: fadeIn 2s backwards;
-            padding: 15px;
 
-        }
+        // h1 {
+        //     font-size: 75px;
+        //     font-family: 'Coolvetica';
+        //     margin-top: 0;
+        //     position: relative;
+        //     text-align: left;
+        //     animation: fadeIn 2s backwards;
+        //     width: 100%;
+        //     left: -25px;
+
+        // }
 
         ul {
+            
             display: grid;
             grid-template-columns: repeat(3, 1fr); // 3 columns
             grid-gap: 15px; // Space between tiles
-            width: 90%;
+            width: 50%;
             margin-top: 15px; // Space below the h1 tag
             list-style: none;
-            margin-bottom: 15px;
-            margin-left: -100px;
+            padding: 20px;
+            border-radius: 8%;
             
 
             li {
+                
                 background-color: #ededed; // Light grey background for each tile
                 border-radius: 15px; // Rounded corners
                 padding: 15px;
@@ -75,6 +76,7 @@
                 transition: transform 0.3s ease;
                 font-family: 'Coolvetica';
                 font-size: 20px;
+                z-index: 999;
                 
 
                 &:hover {
@@ -98,28 +100,20 @@
         }
 
         p {
-            display: absolute;
-            // justify-content: center;
-            // align-items: center;
-            // left: 0px;
             text-align: left;
             color: #000000;
             font-family: 'Coolvetica';
             font-weight: 100;
             animation: fadeIn 3s backwards;
             animation-delay: 1s;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             font-size: 20px;
-            top: -10px;
-
-
-
-            // letter-spacing: 1px;
-            max-width: 600px;
+            max-width: 80%;
             opacity: 1;
             animation: fadeIn 2s backwards;
             padding: 0px;
             line-height: 1.5;
+            //margin-left: 100px;
 
         }
     }
@@ -139,6 +133,9 @@
 }
 
 .contact-page {
+
+    left: 0px;
+
     .text-zone {
 
 
@@ -146,11 +143,10 @@
         animation-delay: 1s;
         z-index: -1;
         position: absolute;
-        left: 150px;
         top: 0px;
-        width: 35%;
+        width: 55%;
         vertical-align: middle;
-        display: table-cell;
+        // display: table-cell;
         min-height: 100%;
         // background-color: rgba(63, 63, 63, 0.4);
         padding: 10px;
@@ -178,9 +174,10 @@
             font-size: 20px;
             letter-spacing: 2px;
             max-width: 650px;
+            width: 80%;
             opacity: 1;
             animation: fadeIn 2s backwards;
-            padding: 0px;
+            padding-bottom: 50px;
             line-height: 1.5;
 
 
@@ -206,3 +203,4 @@
         }
     }
 }
+

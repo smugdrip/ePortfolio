@@ -3,8 +3,7 @@
     display: flex;
     flex-direction: column; // Adjust to column layout
     align-items: center; // Center-align items
-    position: relative; // Use relative for natural flow
-    left: 50px;
+    left: 150px;
 
     p{
         color: #000000;
@@ -13,33 +12,48 @@
         animation: fadeIn 3s backwards;
         animation-delay: 2s;
         letter-spacing: 3px;
-        font-size: 20px;
+        font-size: 22px;
     }
 
 
 
 }
 
+// Adjusted for a vertical layout
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); // 2 columns
-    grid-template-rows: repeat(3, auto); // 3 rows, auto height
-    gap: 20px; // Space between tiles
-    width: 90%;
-    margin-top: 20px; // Space below the h1 tag
+    width: 60%;
+    margin-top: 20px;
+
+    // Use margin for separation instead of grid gap
+    > * + * {
+        margin-top: 20px;
+    }
 }
 
 .project-tile {
-    background-color: #f5f5f5; // Light grey background for each tile
-    border-radius: 15px; // Rounded corners
+    background-color: #f5f5f5;
+    border-radius: 15px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     font-family: 'Coolvetica';
-    font-size: 17px;
+    font-size: 25px;
+    opacity: 1; // Adjusted for direct visibility without fading in
+    border-bottom: 4px solid #000000; // Add a bottom border for separation
+
+    p {
+        font-family: 'Coolvetica';
+        font-size: 16px; // Custom font size for project descriptions
+        color: #000000; // Custom text color for project descriptions
+        letter-spacing: 1px;
+    }
+
+    &:last-child {
+        border-bottom: none; // Remove bottom border for the last item
+    }
 
     &:hover {
-        transform: translateY(-5px); // Slight lift effect on hover
+        transform: translateY(-5px);
     }
 
     h3 {
@@ -56,4 +70,12 @@
     &:nth-child(5) { animation-delay: 3s; }
     &:nth-child(6) { animation-delay: 3.2s; }
     &:nth-child(7) { animation-delay: 3.4s; }
+
+    
+}
+
+.project-link {
+    text-decoration: none; // Removes underline from links
+    color: inherit; // Keeps the text color consistent with your design
+    display: block; // Ensures the link covers the entire tile area for clicking
 }

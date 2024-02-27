@@ -1,45 +1,59 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
-import './index.scss'; // Make sure to create this SCSS file
+import './index.scss';
 import Loader from 'react-loaders';
 
 const Projects = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
 
+    // Calculate the base delay and increment for each tile
+    const baseDelay = 2.2; // Starting delay in seconds
+    const delayIncrement = 0.2; // Increment delay for each subsequent tile
+
     const projects = [
         {
-            title: "Portfolio Website",
-            description: "You're looking at it! Developed using JavaScript, React, HTML, and CSS."
+            title: "Python : Machine Learning",
+            description: "A machine learning project that is able to classify people taking loans based on whether or not they pose a risk to the loaner. Implements both a neural network and random forest style algorithm, as well as batch-search functionality that finds the best combination of hyper-parameters. Current accuracy is about 93%",
+            url: "https://github.com/smugdrip/Python-Machine-Learning"
         },
         {
-            title: "Student Registration System",
-            description: "Developed in Java, this project mimics the official NCSU student registration system. It includes a full-fledged user interface, a password management system, and spefific tools catering to various user roles like staff vs student."
+            title: "JavaScript : Portfolio Website",
+            description: "You're looking at it! Developed using JavaScript, React, HTML, and CSS.",
+            url: "https://github.com/smugdrip/ePortfolio"
         },
         {
-            title: "Memory Encryption and Decryption",
-            description: "Implemented in C, this project focuses on memory encryption and decryption. It utilizes the (outdated) LUCIFER encryption/decryption algorithm from 1970, handling both binary and text files."
+            title: "Java : Student Registration System",
+            description: "Developed in Java, this project mimics the official NCSU student registration system. It includes a full-fledged user interface, a password management system, and speific tools catering to various user roles like staff vs student.",
+            url: "https://github.com/smugdrip/Student-Registration-System"
         },
         {
-            title: "Custom Hash Map",
-            description: "A fully custom hash map implemented in C, built without relying on pre-existing hash map libraries. This reinforced my understanding of abstract data structures and how to implement them in a low-level language like C."
+            title: "C : Memory Encryption and Decryption",
+            description: "Implemented in C, this project focuses on memory encryption and decryption. It utilizes the (outdated) LUCIFER encryption/decryption algorithm from 1970, handling both binary and text files.",
+            url: "https://github.com/smugdrip/Memory-Encryption"
         },
         {
-            title: "Minesweeper",
-            description: "A Java implementation of the classic Minesweeper game. Features a full GUI, custom game logic, custom board generator, recursive algorithms for detecting safe spaces, and a non-volatile record tracking system."
+            title: "Java : Minesweeper",
+            description: "A Java implementation of the classic Minesweeper game. Features a full GUI, custom game logic, custom board generator, recursive algorithms for detecting safe spaces, and a non-volatile record tracking system.",
+            url: "https://github.com/smugdrip/Minesweeper"
         },
         {
-            title: "(In progress) Python Web Scraper",
-            description: "A web scraper implemented in python, used to extract data from websites."
+            title: "(In progress) Python : Web Scraper",
+            description: "A web scraper implemented in python, used to extract data from websites.",
+            url: "https://github.com/smugdrip/ePortfolio"
         },
         {
-            title: "(In progress) Python Machine Learning",
-            description: "A basic machine learning project that is able to classify consumer complaints."
+            title: "Java : Support Ticket Manager",
+            description: "A Java project with a full GUI where support tickets are managed by a priority based system that considers time/type of issue/who sent the request. Tickets are imported/exported to a text file",
+            url: "https://github.com/smugdrip/Support-Ticket-Manager"
         }
     ];
 
     useEffect(() => {
+
+        document.title = "Projects";
+        
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
         }, 3000);
@@ -61,18 +75,32 @@ const Projects = () => {
             </h1>
 
             <p>
-                If you dont mind, let me show off some programming projects
+                Let me show off some programming projects
             </p>
             <br/>
 
             <div className='projects-grid'>
                 {projects.map((project, index) => (
-                    <div key={index} className='project-tile'>
-                        <h3>{project.title}</h3>
-                        <p1>{project.description}</p1>
-                    </div>
+                    <a href={project.url} key={index} className='project-link'>
+                        <div 
+                            className='project-tile'
+                            style={{
+                                animation: `fadeIn 1s ease forwards`,
+                                animationDelay: `${baseDelay + index * delayIncrement}s`,
+                                opacity: 0 // Ensure this is set to 0 to start with the tile being invisible
+                            }}
+                        >
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                        </div>
+                    </a>
                 ))}
             </div>
+            <br/>
+
+            <p>
+                Each tile links to the github for the project
+            </p>
         </div>
         
         <Loader type='ball-beat'/>

@@ -45,6 +45,9 @@ const Contact = () => {
     }
 
     useEffect(() => {
+
+        document.title = "Contact"
+
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
         }, 3000);

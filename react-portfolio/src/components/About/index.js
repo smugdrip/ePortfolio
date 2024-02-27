@@ -4,13 +4,15 @@ import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faJava, faPython, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
 import { Loader } from 'react-loaders';
-import MeImage from '../../assets/images/java_prof.png';
 
 const About = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
+
+        document.title = "About"
+        
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
         }, 3000);
@@ -26,17 +28,36 @@ const About = () => {
                 <h1>
                     <AnimatedLetters
                     letterClass = {letterClass}
-                        strArray={'What can I do?'.split('')}
-                        idx={15}
+                        strArray={'About me'.split('')}
+                        idx={10}
 
                     />
                 </h1>
                 <p>
-                You can download my resume{" "}
-                <a href="/assets/pdf/JohnButterfieldResume.pdf" download>
-                    <span style={{ margin: '0 5px' }}>here</span>
-                </a>.
+                    You can download my resume{" "}
+                    <a href="/assets/pdf/JohnButterfieldResume.pdf" download>
+                        <span style={{ margin: '0 5px' }}>here</span>
+                    </a>.
                 </p>
+                <p>
+                    Hey! My name is John Butterfield and I am currently a Junior at NC State University, studying Computer Science.
+
+                </p>
+                <p>
+                    Since I was young, tinkering with computers and building PCs has been more than a hobby; it's been a way to connect with a world that's constantly evolving. Coding, to me, is fascinating because it's applicable across so many fields and presents endless problem-solving opportunities. Each challenge solved feels like a personal victory, making the process incredibly rewarding.
+                </p>
+                <br/>
+                <br/>
+                <br/>
+                <h1>
+                    <AnimatedLetters
+                    letterClass = {letterClass}
+                        strArray={'What can I do?'.split('')}
+                        idx={10}
+
+                    />
+                </h1>
+
                 <p>
                     Aside from my personal projects, I've learned a lot these classes:
                 </p>
@@ -93,10 +114,6 @@ const About = () => {
 
                 </div>
 
-            </div>
-
-            <div className='img-cont'>
-                <img src={MeImage} alt='Java Cert' className='java-image' />
             </div>
 
         </div>

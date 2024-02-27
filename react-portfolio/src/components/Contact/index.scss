@@ -1,6 +1,6 @@
 .emailForm {
+  
     font-size: 20px;
-    
     z-index: 9;
     opacity: 0;
     animation: fadeInUp 2s 2s;
@@ -9,9 +9,9 @@
     max-height: 350px;
     display: flex;
     flex-direction: column;
-    margin-top: 375px;
-    margin-left: 13%;
-    
+
+    margin-left: 50px;
+    margin-top: 450px;
   
     input,
     textarea {
